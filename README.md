@@ -4,14 +4,14 @@ This prototype will NOT produce any side effects.
 
 Starting the "Elevator" service
 -------------------------------
-1. Start a command line in a terminal window.
+1. Start a command line terminal window.
 
-2. In the terminal window, change directory to the "src" filder under your cloned folder "api_prototype".
+2. In the terminal window, change directory to your cloned folder "api_prototype".
 
-3. Run the following python command in the terminal window:
+3. Run the following script in the terminal window, optionally run the commands in that script individually:
 
 ```
-python main.py --host=localhost
+install_and_start.cmd
 ```
 
 Invoking the REST API with Curl
