@@ -18,7 +18,7 @@ To invoke the API with "curl" please use the following commands:
 
 **NOTE:** in Windows you might have to "escape" the double-quotes in the JSON payload.
 
-`
+```
 curl -d '{"floor":3}' -H "Content-Type: application/json" -X POST http://localhost:8080/bring_elevator
 
 curl -d '{"floor":10}' -H "Content-Type: application/json" -X POST http://localhost:8080/go_to_floor
@@ -26,7 +26,7 @@ curl -d '{"floor":10}' -H "Content-Type: application/json" -X POST http://localh
 curl http://localhost:8080/get_all_servicing_floors
 
 curl http://localhost:8080/get_next_servicing_floor
-`
+```
 
 
 REST API documentation
@@ -34,20 +34,20 @@ REST API documentation
 
 bring_elevator
 --------------
-Purpose:                A person requests that they be brought to a floor
+**Purpose:**                A person requests that they be brought to a floor
 
-Method:                 POST
+**Method:**                 POST
 
-Endpoint:               `http://localhost:8080/bring_elevator`
+**Endpoint:**               `http://localhost:8080/bring_elevator`
 
-Request JSON payload:
+**Request JSON payload:**
 ```
     {
         "floor": integer                        // Floor number where the car should pick person.
     }
 ```
 
-Response JSON payload:
+**Response JSON payload:**
 ```
     {
         "command": "go_to_floor",
@@ -57,20 +57,20 @@ Response JSON payload:
 
 go_to_floor
 -----------
-Purpose:                A person requests that they be brought to a floor
+**Purpose:**                A person requests that they be brought to a floor
 
-Method:                 POST
+**Method:**                 POST
 
-Endpoint:               `http://localhost:8080/go_to_floor`
+**Endpoint:**               `http://localhost:8080/go_to_floor`
 
-Request JSON payload:
+**Request JSON payload:**
 ```
     {
         "floor": integer                        // Floor number where the car should go with person.
     }
 ```
 
-Response JSON payload:
+**Response JSON payload:**
 ```
     {
         "command": "go_to_floor",
@@ -80,15 +80,15 @@ Response JSON payload:
 
 get_all_servicing_floors
 ------------------------
-Purpose:                An elevator car requests all floors that its current passengers are servicing (e.g. to light up the buttons that show which floors the car is going to)
+**Purpose:**                An elevator car requests all floors that its current passengers are servicing (e.g. to light up the buttons that show which floors the car is going to)
 
-Method:                 GET
+**Method:**                 GET
 
-Endpoint:               `http://localhost:8080/get_all_servicing_floors`
+**Endpoint:**               `http://localhost:8080/get_all_servicing_floors`
 
-Request JSON payload:   Request doesn't expect parameters.
+**Request JSON payload:**   Request doesn't expect parameters.
 
-Response JSON payload:
+**Response JSON payload:**
 ```
     {
         "command": "get_all_servicing_floors",
@@ -98,15 +98,15 @@ Response JSON payload:
 
 get_next_servicing_floor
 ------------------------
-Purpose:                An elevator car requests the next floor it needs to service
+**Purpose:**                An elevator car requests the next floor it needs to service
 
-Method:                 GET
+**Method:**                 GET
 
-Endpoint:               `http://localhost:8080/get_next_servicing_floor`
+**Endpoint:**               `http://localhost:8080/get_next_servicing_floor`
 
-Request JSON payload:   Request doesn't expect parameters.
+**Request JSON payload:**   Request doesn't expect parameters.
 
-Response JSON payload:
+**Response JSON payload:**
 ```
     {
         "command": "get_next_servicing_floor",
