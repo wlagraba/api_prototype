@@ -16,12 +16,10 @@ Invoking the REST API with Curl
 -------------------------------
 To invoke the API with "curl" please use the following commands:
 
-**NOTE:** in Windows you might have to "escape" the double-quotes in the JSON payload.
-
 ```
-curl -d '{"floor":3}' -H "Content-Type: application/json" -X POST http://localhost:8080/bring_elevator
+curl -d "{""floor"":3}" -H "Content-Type: application/json" -X POST http://localhost:8080/bring_elevator
 
-curl -d '{"floor":10}' -H "Content-Type: application/json" -X POST http://localhost:8080/go_to_floor
+curl -d "{""floor"":10}" -H "Content-Type: application/json" -X POST http://localhost:8080/go_to_floor
 
 curl http://localhost:8080/get_all_servicing_floors
 
