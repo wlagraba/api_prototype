@@ -4,9 +4,11 @@ This prototype will NOT produce any side effects.
 
 Starting the "Elevator" service
 -------------------------------
-Change directory to the "src" folder under your cloned folder "api_prototype".
+1. Start a command line in a terminal window.
 
-Run the following python command line in a terminal window:
+2. In the terminal window, change directory to the "src" filder under your cloned folder "api_prototype".
+
+3. Run the following python command in the terminal window:
 
 ```
 python main.py --host=localhost
